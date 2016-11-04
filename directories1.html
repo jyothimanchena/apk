@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>egsd</title>
+     
+	 <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+   <!--  <link rel="stylesheet" href="https://yui.yahooapis.com/pure/0.6.0/pure-min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/spinner.css">
+	<script src="js/jquery-2.1.4.js"></script>
+     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+
+</head>
+<body onload="myFunction()" id="locationbackground">
+
+<!--<div class="section navbar-top headerbg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+		  <h1 class="text-center backIconHover align" ><a class="btn pull-left" href="index.html"><i class="fa fa-chevron-circle-left"></i> </a><a href="#"></a></h1>
+            <h1 class="text-center logo-font"><img class="img" src="img/logo.jpg"/> eGSD</h1>
+          </div>
+        </div>
+      </div>
+    </div>-->
+	<!-- code for spinner -->
+	<div class="loading mbody" style="display:none">Loading&#8230;</div>
+	
+	<!-- CSA: Start Hotel Logo -->
+	
+	<div class="section picImageSection fixed-top">
+    <!--   <div class="container"> -->
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+		  <!-- <div class="imgaspects"> -->
+				<center><img class="logo center-block  margin" id="locationhotellogo"></center>
+				<!--	<center><img class="logo center-block  margin img-responsive " id="locationhotellogo"></center> -->
+	
+	        <!-- </div>-->
+		   
+           <!-- <img class="center-block img-rounded margin directory-logo" id="locationhotellogo"> -->
+          </div>
+        </div>
+     <!--  </div> -->
+    </div>
+	
+	<!-- CSA: End Hotel Logo -->
+	   
+<div class="section navbar headerBackground">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+		   <h1 class="text-center backIconHover align" ><a class="btn pull-left" href="home.html" style="display:none;"><i class="fa fa-chevron-circle-left"> Back</i> </a><a href="#"></a></h1>
+            
+			<!-- CSA: Start Title/Name -->
+			<p class="text-center backIconHover locationpadding titlestyle " id="location"></p>
+			<!-- CSA: End Title/Name -->
+			
+
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<!-- CSA: Start Menu Bar -->
+	
+    <!-- menu bar --><!--
+	<div class="section navbar  home-navbar menuicon">
+		<div class="dropdown iconlist icon" >
+					<img onclick="showdropdown()"   src="images/icons/menu.png"class="iconimg dropbtn">
+					  <div id="myDropdown" class="dropdown-content menuItems">
+					  
+						   --><!-- <a href=""><img src="images/icons/home.png" class="iconimg" title="Home"><br>Home</a> --><!--
+						   <a href="" style="text-align:left">Home</a>
+						
+						 
+					  </div>
+			 <a href=""><img src="images/icons/home.png" class="iconimg" title="Home"></a>
+			
+		</div>
+	</div>
+-->
+	<!-- CSA: End Menu Bar -->
+	
+	<hr>
+	    <!-- menu / icon bar -->
+
+             
+
+        <div class="iconCenter iconbar">
+
+          <div class="dropdown iconlist icon" id="menubar">
+
+		  		<img onclick="showdropdown()"   src="images/icons/menu.png"class="iconimg dropbtn">
+ <!--         <img src="jqm-icons/icons-png/bars-black.png" alt="menu" class="dropbtn" onclick="showdropdown()">  -->
+
+            <div id="myDropdown" class="dropdown-content menuItems">
+
+                <a href="">Home</a>
+
+            </div>
+
+                <a href=""><img src="images/icons/home.png" alt="Home" class="iconimg" title="Home"></a>
+
+          </div>
+
+        </div>
+
+     <!-- /menu / icon bar -->
+	
+
+	<!-- CSA: Start Hotel Photo -->
+	
+	 <div class="section picImageSection fixed-top">
+    <!--   <div class="container"> -->
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+		  <div class="imgaspects">
+					<center><img class="logo center-block  margin img-responsive " id="locationlogo"></center>
+	
+	        </div>
+		     <!-- <img class="logo center-block img-rounded margin directory-logo" id="locationlogo"> -->
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+	<!-- CSA: End Hotel Photo -->
+	
+    <!-- location bar -->
+
+        
+
+        <!-- prop image --><!-- hide image --> 
+
+          <center>    
+
+          <div>     
+
+                <div class="ui-grid-b" id="locationbackground">
+
+                 <!--   <div class="ui-block-a glyphicon glyphicon-chevron-down iconimg" data-toggle="collapse" data-target="#collapseImage1" ></div>                 -->
+
+                    <!-- <div class="ui-block-b ld_location" id="location"></div> -->
+					<div class="ui-block-c glyphicon glyphicon-chevron-down glyphicon-map-marker glyphicon-chevron-up iconimg" data-toggle="collapse" data-target="#collapse_address" ></div>
+					<div class="ui-block-c glyphicon glyphicon-map-marker iconimg" data-toggle="collapse" data-target="#collapse_address" ></div>
+					<div class="ui-block-c glyphicon glyphicon-chevron-up iconimg" data-toggle="collapse" data-target="#collapse_address" ></div>
+
+              </div> 
+
+              
+
+               <!-- address mapping inside expanded location bar -->
+
+                    <div class="collapse" id="collapse_address">
+
+                       <div class="mapfun panel-body">
+
+               <!-- <div class="section" id="geocss" style="margin-top:10px" > -->
+
+                			<div class = "col-md-4 col-sm-4 col-xs-4 geomapindex" id="locationgeomap" style="z-index: 9999 !important"></div>
+
+                           	<div class = "col-md-8 col-sm-8 col-xs-8 geocss" id="dirlocationdetails"></div>
+
+                       </div>
+
+                    </div>  
+
+                                
+
+             
+
+		<!-- /prop image --><!-- /hide image -->  
+
+            <!-- <div id="collapseImage1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+
+                <div class="panel-body panel-body_ld">
+
+                    <div class="section picImageSection fixed-top">
+
+                        <div class="imgaspects">
+
+                            
+
+                            <img class="logo center-block panel-body_ld" id="locationlogo">
+
+                            
+
+                        </div>
+
+                    </div>                   
+
+              </div>
+
+            </div>  -->
+
+     </div> </center> 
+
+		<!-- /prop image --><!-- / hide image -->
+
+            
+
+    <!-- / location bar -->
+	
+	
+	<!-- CSA: Start Address -->
+	
+	<!-- address mapping -->
+	<div class="mapfun">
+	<div class="section " id="geocss" style="margin-top:10px" >
+   <!--  <div class = "row" style="margin-top:10px;"> -->
+   <div class = "col-md-4 col-sm-4 col-xs-4 geomapindex" id="locationgeomap" style="z-index: 9999 !important"><br>
+
+<!--             <a onclick="myNavFunc(this.id,this.lang)" id="22" lang="55"><img class = "center-block" src="./images/map.jpg" style="width:25%;" alt = "" > <p class="text-center">directions</p><a> -->
+
+	</div>
+    <div class = "col-md-8 col-sm-8 col-xs-8 geocss"  id="dirlocationdetails" >
+       
+            
+    </div>
+	
+	
+    </div>
+	</div>
+	
+	<!-- CSA: End Address -->
+	
+	</div>
+
+	
+	<!-- CSA: Start HTML -->
+	
+	<!-- welcome message -->
+	<div class="section" id="locationmessage">
+     <!--  <div class="container">
+        <div class="row" id="locationmessage">
+          <div class="col-md-12 text-center " style="font-color:black" id="locationmessage">
+          </div>
+        </div>
+      </div> -->
+    </div>
+	
+	<!-- CSA: End HTML -->
+
+	<!-- CSA: Start Dir Folder Buttons -->
+		<hr>
+	<div class="section" >
+     <div class="container">
+        <div class="row">
+			<!-- CSA: Start Caption -->
+			<p class="text-center backIconHover" class="captionstyle" id="locationcaption"></p>
+			<!-- CSA: End Caption -->
+          <div class="col-md-12 text-center locationcontent">
+		  <!-- <text>&nbsp&nbsp</text> -->
+		  <br>
+          </div>
+        </div>
+      </div> 
+    </div>
+	 <!-- <div class="section" id="locationhtml">
+	</div> -->
+	
+	<!-- CSA: Start Dir Folder Buttons -->
+	
+	<!--  list of dir items -->
+	<div class="section" id="titledir">
+	
+     </div>
+
+	 	<!-- CSA: End Dir Folder Buttons -->
+	 
+	 	<!-- CSA: Start Search Bar -->
+	
+	<!--  <div class="section">
+      <div>
+        <div class="row">
+          <div class="col-md-12 text-center yourSearch">
+           
+              <input type="text"  onfocus="this.placeholder = ''" id="textbox">
+			<a id="search" class="btn"> <i id="SearchColor" class="glyphicon glyphicon-search" style="color:white;font-size:24px;margin-left: -10px; margin-top:-1px !Important" ></i></a>
+			
+           </div>
+	     </div>
+      </div>
+    </div> -->
+	
+	
+	 <div class="section">
+     
+        <div class="row yourSearch">
+         
+		 <!-- <div class="col-md-1 col-sm-1 col-xs-2">
+		  <h1 class=" backIconHover align" ><a class="btn" href="home.html" style="margin-top:-15px;"><i class="fa fa-chevron-circle-left backbutton" title="Location" > <text style="font-family:Arial;">Loc</text></i> </a><a href="#"></a></h1>
+		  </div> -->
+		  
+		  <div class="col-md-11 col-sm-11 col-xs-10">
+		  <input type="text"  onfocus="this.placeholder = ''" id="textbox">
+		  </div>
+		  <div class="col-md-1 col-sm-1 col-xs-2">
+		  <a id="search" class="searchbtn" > <i id="SearchColor" class="glyphicon glyphicon-search" style="color:black;font-size:24px !important;"></i></a>
+		  </div>
+				<!-- <a class="btn backIconHover align" onclick="funback()" ><i class="fa fa-chevron-circle-left backbutton"> <text style="font-family:Arial;">Back</text></i> </a><a href="#"></a>
+              <input type="text"  onfocus="this.placeholder = ''" id="textbox">
+			<a id="search" class="btn"> <i id="SearchColor" class="glyphicon glyphicon-search" style="color:white;font-size:24px;margin-left: -10px;  margin-top:-6px !Important" ></i></a> -->
+			 
+			 <!--  <img src="./images/download.png" > -->
+             
+           
+	     
+     </div>
+    </div>
+	
+	<!-- CSA: End Search Bar -->
+	
+	 
+	 <!-- CSA: Start Footer Image -->
+	 
+<!--  <!--  <div class="row" style="margin-top:82px">
+	<div class="footerWrap"> -->
+	 <div class="section"  id="footerimage">
+	<!-- <div style="background:white;" >
+	<center><img id="footerimage" class="footer"></center>
+	</div> -->
+	
+       </div>
+	   
+	 <!-- CSA: End Footer Image -->
+	 
+	 <!-- CSA: Start Footer Text -->
+    
+	 <div class="section" id="footerText">
+	   
+	 </div> 
+	
+	 <!-- CSA: End Footer Text -->
+	 
+	<!-- foot image -->
+	
+	
+
+		<script>
+		function myNavFunc(lat,lang){
+		allplatforms="http://maps.google.com/maps?q="+lat+","+lang+""
+		iphone="maps://maps.google.com/maps?q="+lat+","+lang+""
+		
+			// If it's an iPhone..
+			if( (navigator.platform.indexOf("iPhone") != -1) 
+				|| (navigator.platform.indexOf("iPod") != -1)
+				|| (navigator.platform.indexOf("iPad") != -1))
+				 window.open(iphone);
+			else
+				 window.open(allplatforms);
+		}
+		</script>
+		<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function showdropdown() {
+				document.getElementById("myDropdown").classList.toggle("show");
+				style="z-index:0 !important"
+				$('.geomapindex').attr('style',style);
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+			  if (!event.target.matches('.dropbtn')) {
+				style="z-index:9999 !important"
+				$('.geomapindex').attr('style',style);
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+				  var openDropdown = dropdowns[i];
+				  if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				  }
+				}
+			  }
+			}
+			</script>
+
+	<!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
+	<script src="js/location.js" async="async"></script>
+     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" async="async"></script>
+         <script src="js/parse.js" async="async"></script>
+    <!--  <script src="https://www.parsecdn.com/js/parse-1.2.8.min.js" async="async"></script> -->
+	
+</body>
+</html>
