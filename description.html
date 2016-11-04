@@ -1,0 +1,230 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+   <!--  <link rel="stylesheet" href="https://yui.yahooapis.com/pure/0.6.0/pure-min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jqmapp.css"> 
+	 <script src="js/jquery-2.1.4.js"></script>
+     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+</head>
+<body onload="myDescription()" id="locationbackground">
+
+	<table width="100%" class="locationbackground">
+        <tbody>
+        <tr>
+        
+        <td><a class="btn ld_head-icon_leftshare" href="javascript:history.back()"><img src="images/jqm-icons/back-black.png" style="width:20px;height:20px !important"></a>
+          </td>
+        <td>
+        
+          <td><center><a class="btn" href="#"><img class="ld_logo center-block margin" id="locationhotellogo"></a></center></td>
+          <td><img src="images/jqm-icons/bars-black.png" alt="menu" class="dropbtn" onclick="showdropdown()"></td>
+            <div id="myDropdown" class="dropdown-content menuItems">
+
+				<a href="#" class="parentid">Home</a>
+				<a href="home.html">Change Location/Directory</a>
+
+            </div>
+        </tr>
+      </tbody>
+	</table>   
+
+<!-- 	<div class="section picImageSection fixed-top">
+ 
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+		  
+				<center id="headerBcgrnd" ><img class="logo center-block  margin" id="locationhotellogo"></center>
+				
+	
+	      
+          </div>
+        </div>
+   
+    </div> -->
+
+<div class="section navbar headerBackground">
+      <div class="container">
+        <div class="row">
+          
+		   <div class="col-md-12">
+            <p class="text-center backIconHover" id="location"></p>
+			
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- <div>
+		<p class="text-center backIconHover guest" id="locationcaption" class="locSubHeadStyle"></p>
+	<div> -->
+	<div class="section navbar  home-navbar menuicon iconCenter">
+		<div class="dropdown iconlist ">
+					<!-- <img onclick="showdropdown()"   src="images/icons/menu.png"class="iconimg dropbtn"> -->
+					<!--   <div id="myDropdown" class="dropdown-content menuItems">
+						
+						 <a class="parentid" >Home</a>
+						 <a href="home.html">Change Location/Directory</a>
+						 
+					  </div> -->
+			 <a class="parentid"><img src="images/icons/home.png" class="iconimg" title="Home"></a>
+			<!-- <a  id="locationFrontDesk"><img src="images/icons/frontdesk.png" class="iconimg "title="Service/Frontdesk"></a>
+			<a><img src="images/icons/phone.png" class="iconimg" title="Housephone"></a>
+						 <a id="locationEmergency"><img src="images/icons/soss.png" class="iconimg" title="Emergency"></a> --> 
+		</div>
+	</div>
+
+	
+  
+	 <hr style="height:1px; background-color:#fff;margin-top:0px !important; margin-bottom:5px !important">
+	<div id="titlecaption"></div>
+	<div id="titleimage"></div>
+	<div id="timings"></div>
+	<div id="description"></div>
+	<p id="menu" class="descmenu"></p>
+	<div class="section"> <p id="phone" class="descmenu"></p></div>
+	 
+	<div class="section" id="titledir"></div>
+	
+	<!-- <div class="section" style="background:#ffffff;" >
+      <div class="container"  >
+        <div class="row" >
+          <div class="col-md-12 text-center " style="font-color:black;" >
+			hekehfk<br>kkvfbg
+          </div>
+        </div>
+      </div> 
+    </div> -->
+	
+	<!-- <div class="section navbar text-center home-navbar">
+		<a class="parentid"><i class="fa fa-home fa-2x fonticon iconcolor"></i>  </a>
+		<i class="fa fa-shopping-cart fa-2x fonticon iconcolor" id="food"></i>
+		
+		<i class="fa fa-briefcase fa-2x fonticon iconcolor" id="transport"></i>
+		<i class="fa fa-shirtsinbulk fa-2x fonticon iconcolor" id="banking"></i>
+		<a href="index.html"><i class="fa fa-search fa-2x fonticon iconcolor"></i></a>
+	</div>  -->
+ <!--  <div class="section navbar-top headerbg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center logo-font"><a class="btn pull-left" id="parentid"><i class="fa fa-chevron-circle-left"></i></a>
+			<img class="img" src="img/logo.jpg"/> eGSD</h1>
+          </div>
+        </div>
+      </div>
+    </div>  -->
+   <!-- <div class="section navbar headerBackground title">
+    </div>
+  
+   <div class="section" style="display:none;" id="search">
+      <div>
+        <div class="row">
+          <div class="col-md-12 text-center yourSearch">
+           
+              <input type="text" placeholder="Search items..." onfocus="this.placeholder = ''" id="textbox">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+     </div>
+    <div class="section directories" style="margin-top:30px">
+      <div>
+        <div class="row">
+		
+          <div class="col-md-12" >
+            <div id="data" class="datapadding"></div>
+			<div id="menu" class="datapadding"></div>
+			<div id="title"></div>
+			  <div id="web" class="datapadding"></div>
+				    <p id="phone" class="datapadding"></p>
+                  
+                 
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="section">
+      <div>
+        <div class="row">
+		   <div class="col-md-12">
+		   <div id="web"></div>
+		   </div>
+		</div>
+	  </div>
+   </div> -->
+		   
+	<!-- <div class="section">
+     
+        <div class="row yourSearch">
+         
+		
+		  <div class="col-md-10 col-sm-10 col-xs-10" style="padding:0px">
+		  <input type="text"  onfocus="this.placeholder = ''" id="textbox">
+		  </div>
+		  <div class="col-md-1 col-sm-1 col-xs-2 " style="padding:0px">
+		  <a id="search" class="searchbtn" > <i id="SearchColor" class="glyphicon glyphicon-search" style="color:white;font-size:24px !important;"></i></a>
+		  </div>
+				
+           
+	     
+      </div>
+    </div> -->
+	
+	 <div class="section"  id="footerimage">
+	<!-- <div style="background:white;" >
+	<center><img id="footerimage" class="footer"></center>
+	</div> -->
+	
+     </div>
+     <div class="section" id="footerText">
+	   
+	 </div> 
+
+ <!-- <div class="section"  id="footerimage"></div> -->
+		<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function showdropdown() {
+				document.getElementById("myDropdown").classList.toggle("show");
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+			  if (!event.target.matches('.dropbtn')) {
+
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+				  var openDropdown = dropdowns[i];
+				  if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				  }
+				}
+			  }
+			}
+			</script>
+			<script src="js/jquery-1.11.0.min.js"></script>
+         <script src="js/description.js" type="text/javascript" ></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/parse.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+	    <script type="text/javascript" src="js/index.js"></script>
+     <!-- <script src="https://www.parsecdn.com/js/parse-1.2.8.min.js"></script> -->
+	  <script type="text/javascript">
+         function funback()
+         {
+              window.history.back() 
+         }
+      </script>
+</body>	 
+</html>

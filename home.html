@@ -1,0 +1,171 @@
+<html>
+	<head>
+		<title>eGSD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/materialize.css">
+		<link rel="stylesheet" href="css/materialize.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<!--  <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script> -->
+		
+		
+<!-- Compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css"> -->
+
+<!-- Compiled and minified JavaScript -->
+
+	</head>
+	<body onload="locationFunction()">
+	<!--	<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper">
+				  <a href="#" class="brand-logo center"><img class="img" src="img/hotel.jpg"/> eGSD</a>				  
+				</div>
+				
+			</nav>
+			
+			
+		</div>-->
+		
+		<div class="navbar-fixed">
+   <nav>
+    <div class="nav-wrapper">
+      <!--<a href="#" class="brand-logo center"><img class="egsdimg" src="img/logo1.gif"/> eGSD</a-->   
+	  <div class="left-text">
+	  <p class="heading">Directory/Location Finder</p>
+	  <p style="color:black;">(Pick a local listing or enter search value)</p>
+	  </div>
+	  <div class="right-search">
+		<a onclick="showhelp()"  data-title="#modal1"><i class="fa fa-question-circle"></i></a>
+	  </div>
+    </div>
+	<div>
+    <fieldset>
+    
+   
+    <input class="form-control" type="text" name="q" placeholder="Search (example: Zip/Postal Code, etc.)" onfocus="this.placeholder = ''" id="textbox">
+	
+    <input type="hidden" >
+   
+    
+    </fieldset>
+	</div>
+   </nav>
+   
+   
+  </div>
+  <div id="modal1" class="modal" data-position="top" style="min-width:290px;min-height:350px;background:#C3DBF0">
+    <div class="modal-content">
+       <!-- <div class="modal-header">
+      <a onclick="hidehelp()" class="modal-action modal-close waves-effect waves-green btn-flat ">close</a>
+    </div> -->
+	  <p class="helpheading">Directory/Location Finder Help</p>
+	  <hr>
+      <p>The Directory/Location Finder page is used to obtain access to any location<code>'</code>s directory in this system. </p><p></p>
+	  <p>Choose any location to load its directory contents by tapping the right arrow icon next to any listing to load.</p><p></p>
+	  <p>If your device<code>'</code>s location settings allow this app to identify your current location, a list of local choices will be displayed automatically for you to choose from.</p><p></p>
+	  <p>If no local listings are automatically displayed, or if you want to search a different area, then you may search for other locations/directories by entering a valid search value in the search bar.</p><p></p>
+	  <p>Valid search values are:</p>
+	  <ul>
+	  <li>-&nbsp Zip/Postal Code</li>
+	  <li>-&nbsp Property/Location Name</li>
+	  <li>-&nbsp Property/Location Address</li>
+	  <li>-&nbsp Property/Location Code (may be provided to you by guest services staff)</li>
+	  </ul>
+    </div>
+   
+  </div>
+  <br><br><br>
+		
+		
+<!--		<div class="navbar-fixed container">
+			<form action="https://www.google.com/search" method="get">
+				<input class="form-control" type="text" name="q" placeholder="Search ...">
+				<input type="hidden" >
+			</form>			
+		</div>
+		<i class="mdi-content-add">Search</i>
+		<i class="mdi-navigation-close close"></i>
+		-->
+	<!--	<div class="container">
+	             <form>
+					<div class="input-field">
+						<input type="search" id="search-field" class="field" onkeypress="handle(event)" required maxlength="">
+						<label for="search-field"><i class="fa fa-search fa-2x"></i></label>
+						
+						
+					</div>
+		         </form>
+		</div>-->
+		<div id="locations" >
+		 <div id="noGPS" style="display:none">
+			<div style="margin-top:50px;margin-left:30px;margin-right:30px;padding: 0 75px; ">
+				<center ><text class="text-center brand-logo" id="noresult" style="color:#ffffff;font-size: 15px !important;"> No local locations currently found.  
+
+			</text></center>
+		  </div>
+
+			<div style="margin-top:20px;padding: 0 60px; ">
+						
+					
+			<center ><text class="text-center brand-logo"  style="color:#ffffff;font-size: 15px !important;">Please enter a search value, or turn on location permissions on your device for this app.
+			</text></center>
+			</div>
+		</div> 
+		</div>
+		<!--   <a  onclick="showhelp()"> <button class="btn modal-trigger" data-title="#modal2">Modal</button></a> -->
+		<!--  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+ 
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div> -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+  <script>
+/*$(document).ready(function(){
+    
+    $('.modal-trigger').leanModal();
+	$('#modal1').openModal();
+  }); */
+          
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  function showhelp(){
+<!--    $('#modal1').show(); -->
+$('#modal1').openModal();
+  }
+  
+ /* window.onclick = function(event) {
+			  if (event.target.matches('#modal1')) {
+  $('#modal1').hide();
+  }
+  } */
+  
+
+
+
+</script>
+		<script src="js/home.js"></script>
+    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+       <!--  <script src="js/jquery-2.1.4.js"></script> -->
+  <script src="js/parse.js"></script>
+  	 <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+<!--  <script src="https://www.parsecdn.com/js/parse-1.2.8.min.js"></script>  -->
+     
+	  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk8kdBhHGSbTBslUXmYDCbRt1IbdnTWxk&callback=initMap" type="text/javascript"> 
+    </script>-->
+	</body>
+	
+</html>

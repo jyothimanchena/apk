@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>eGSD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/materialize.css">
+		<link rel="stylesheet" href="css/materialize.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		 <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+	</head>
+	<body onload="locationFunction()">
+	<!--	<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper">
+				  <a href="#" class="brand-logo center"><img class="img" src="img/hotel.jpg"/> eGSD</a>				  
+				</div>
+				
+			</nav>
+			
+			
+		</div>-->
+		<div class="navbar-fixed">
+   <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"><img class="egsdimg" src="img/logo1.gif"/> eGSD</a>      
+    </div>
+	<div>
+    <fieldset>
+    
+   
+    <input class="form-control" type="text" name="q" placeholder="Search (Locationcode/Name/Address/Zipcode)" onfocus="this.placeholder = ''" id="textbox">
+	
+    <input type="hidden" >
+   
+    
+    </fieldset>
+	</div>
+   </nav>
+   
+   
+  </div>
+  <br><br><br>
+		
+		
+<!--		<div class="navbar-fixed container">
+			<form action="https://www.google.com/search" method="get">
+				<input class="form-control" type="text" name="q" placeholder="Search ...">
+				<input type="hidden" >
+			</form>			
+		</div>
+		<i class="mdi-content-add">Search</i>
+		<i class="mdi-navigation-close close"></i>
+		-->
+	<!--	<div class="container">
+	             <form>
+					<div class="input-field">
+						<input type="search" id="search-field" class="field" onkeypress="handle(event)" required maxlength="">
+						<label for="search-field"><i class="fa fa-search fa-2x"></i></label>
+						
+						
+					</div>
+		         </form>
+		</div>-->
+		<div id="locations"></div>
+		
+		
+		<script src="js/home.js"></script>
+   
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-2.1.4.js"></script>
+  <script src="js/parse.js"></script>
+ <!--  <script src="https://www.parsecdn.com/js/parse-1.2.8.min.js"></script> -->
+     
+	  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk8kdBhHGSbTBslUXmYDCbRt1IbdnTWxk&callback=initMap" type="text/javascript"> 
+    </script>-->
+	</body>
+	
+</html>

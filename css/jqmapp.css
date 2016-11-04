@@ -1,0 +1,200 @@
+/* basic app styling */
+.apptext {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.list-subtitle {
+	font-style: italic;
+}
+
+h1.detail-title {
+	font-size: 1.25em;
+	margin-top: .25em;
+}
+
+.detail-subtitle {
+	font-style: italic;
+	font-size: 1.1em;
+}
+
+.homeimage {
+	display: block;
+	max-width:290px;
+	margin: auto;
+}
+
+.image2 {
+	display: block;
+	max-width:100%;
+	margin: auto;
+}
+
+.detail-image {
+	display: block;
+	max-width:250px;
+	max-height:250px;
+	margin: auto;
+}
+
+#social-media {
+	text-align: center;
+}
+
+.social-button {
+	display: inline-block;
+	margin: 7px;
+}
+
+.detail-title {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+
+.detail-image {
+	display: block;
+	max-width:100%;
+	margin: auto;
+}
+
+.detail-list {
+	font-size: 0.9em;
+}
+
+.label {
+	font-weight: bold;
+	line-height: 1.5em;
+}
+
+.labelcell {
+	text-align: right;
+	padding-left: 0.5em;
+	padding-right: 0.1em;
+}
+
+.qrimage {
+	border-radius: 10px;
+}
+
+/* jQuery Mobile tweaks */
+
+/* specific to Menu/Catalog */
+.list-price {
+	float: right;
+	font-weight: bold;
+	font-size: .8em;
+}
+
+.detail-price {
+	text-align: right;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.list-subtitle {
+	font-style: italic;
+}
+
+/* specific to Directories */
+#directory-image {
+	display: block;
+}
+
+/* the login page for private apps */
+.loginmsg {
+	font-weight: bold;
+	color: #8c2d2d;
+	text-align: center;
+}
+
+#logout {
+	margin-top: 2em;
+	margin-bottom: 1em;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sharebutton {
+	margin-top: 2em;
+	margin-bottom: 1em;
+	width: 66%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.qrcode {
+	text-align: center;	
+}
+
+#ocslink {
+	margin-top: 2em;
+	text-align: center;
+	font-size: .75em;
+	font-style: italic;
+}
+
+#ocslink a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* custom icons */
+.ui-icon-share-email {
+	background-image: url("images/email-jqm-icon.png");
+	background-size: 18px 18px;
+}
+
+.ui-icon-twitter {
+	background-image: url("images/twitter-jqm-icon.png");
+	background-size: 18px 18px;
+}
+
+.ui-icon-facebook {
+	background-image: url("images/facebook-jqm-icon.png");
+	background-size: 18px 18px;
+}
+
+.ui-icon-sharethis {
+	background-image: url("images/share-jqm-icon.png");
+	background-size: 18px 18px;
+}
+
+/* mapimages */
+.mapimg {
+	-webkit-box-shadow: 3px 3px 8px 6px rgba(0,0,0,0.5);
+	-moz-box-shadow: 3px 3px 8px 6px rgba(0,0,0,0.5);
+	box-shadow: 3px 3px 8px 6px rgba(0,0,0,0.5);
+}
+
+
+/* eventapp */
+
+.textbox {
+	background: #FFF;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 10px;
+	padding: 6px 8px;
+	moz-box-shadow: 0 1px 4px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	}
+
+span.dlabel {
+	font-weight: bold;
+	}
+
+.dsub {
+	font-style: italic;
+	}
+	
+.reseller-watermark {
+	margin: auto;
+	text-align: center;
+	font-size: 0.5em;
+	opacity: 0.33;
+}
